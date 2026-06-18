@@ -8,9 +8,10 @@ h1{
     vertical-align: middle;
     max-width: 100%;
     width: 15%;
-    height: 15%;
+    height: auto;
     border-radius: 25%;
 }
 .link{
+    text-align:center;
     background-color: green;
 }
