@@ -1,0 +1,12 @@
+#h1{
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-weight:normal;
+}
+#test{
+    vertical-align: middle;
+    width: 20px;
+    height: auto;
+    border-radius: 100%;
+}
