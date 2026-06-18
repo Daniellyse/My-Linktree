@@ -1,12 +1,16 @@
 h1{
-    background-color: black;
+    background-color: rgb(238, 166, 194);
     color:white;
     text-align: center;
     font-weight:normal;
 }
 .profilePic{
     vertical-align: middle;
-    width: 30%;
-    height: 30%;
+    max-width: 100%;
+    width: 15%;
+    height: 15%;
     border-radius: 25%;
+}
+.link{
+    background-color: green;
 }
