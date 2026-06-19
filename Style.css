@@ -4,14 +4,40 @@ h1{
     text-align: center;
     font-weight:normal;
 }
+body{
+    background-color: rgb(255, 255, 223);
+}
+.bio{
+    display: flex;
+    justify-content:center ;
+}
 .profilePic{
-    vertical-align: middle;
+    display:flex;
+    justify-content: center;
+    margin: auto;
     max-width: 100%;
     width: 15%;
     height: auto;
     border-radius: 25%;
 }
 .link{
-    text-align:center;
-    background-color: green;
+    max-width: 75%; 
+    width: 15rem;
+    height: 3.5rem;
+
+    margin:auto;
+    
+    margin-top: 1rem;
+    
+    display:grid;
+    grid-auto-flow: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgba(228, 43, 114, 0.87);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    border-radius: 35%;
 }
