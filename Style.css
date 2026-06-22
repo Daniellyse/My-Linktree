@@ -41,3 +41,11 @@ body{
     font-size: 12pt;
     border-radius: 35%;
 }
+.starR{
+    max-width: 2rem;
+    height: auto;
+}
+footer{
+    text-align: left;
+    
+}
