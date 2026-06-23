@@ -1,0 +1,11 @@
+
+h1{
+    background-color: rgb(238, 166, 194);
+    color:white;
+    font-family: 'test','Times New Roman', Courier, monospace;
+    text-align: center;
+    font-weight:normal;
+}
+body{
+    background-color: rgb(255, 255, 223);
+}

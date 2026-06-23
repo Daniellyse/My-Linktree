@@ -1,12 +1,18 @@
 @font-face{
-    font-family: test;
-    src:url('Bigtimes.otf') format('otf');
+    font-family: 'test';
+    src:url(Agbalumo-Regular.ttf);
+    font-style: normal;
+}
+@font-face{
+    font-family: 'NAME';
+    src:url(PLAYFAIRDISPLAY-VARIABLEFONT_WGHT.TTF);
+    font-style: normal;
 }
 
 h1{
     background-color: rgb(238, 166, 194);
     color:white;
-    font-family: 'test','Times New Roman', Courier, monospace;
+    font-family: NAME,'Times New Roman', Courier, monospace;
     text-align: center;
     font-weight:normal;
 }
@@ -16,6 +22,7 @@ body{
 .bio{
     display: flex;
     justify-content:center ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .profilePic{
     display:flex;
