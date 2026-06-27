@@ -1,0 +1,11 @@
+.test{
+    .q{
+        max-width: 100px;
+        justify-content: left;
+    }
+    .w{
+        max-width: auto;
+        justify-content: right;
+
+    }
+}
