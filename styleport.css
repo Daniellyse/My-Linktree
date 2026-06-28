@@ -1,11 +1,10 @@
-.test{
-    .q{
-        max-width: 100px;
-        justify-content: left;
-    }
-    .w{
-        max-width: auto;
-        justify-content: right;
+.shelf{
+    display: flex; /*side-by-side*/
+    
+}
+.box{
+    width: 45%;
+    max-height: 500px;
+    max-width: 500px;
 
-    }
 }
