@@ -1,27 +1,56 @@
+:root{
+    --base-color: rgb(255, 255, 223);
+    --header-txt-color: rgba(255, 255, 255, 0.87);
+    --header-bkgnd: rgb(238, 166, 194);
+    --text-color: rgb(40, 0, 66);
+    --bttn-1:rgba(118, 193, 255,70);
+    --bttn-2:rgba(255, 118, 171,70);
+    --bttn-3:rgba(120, 255, 199,70);
+    --bttn-4:rgba(253, 255, 119,70);
+    --border-grad2:rgba(255, 214, 32, 0.664);
+    --border-grad1:rgb(250, 171, 239);
+}
+.darkmode{
+    --base-color: rgb(32, 0, 68);
+    --header-txt-color:  rgb(235, 205, 255);
+    --header-bkgnd: rgb(64, 7, 139);
+    --text-color: rgb(235, 205, 255);
+    
+    --bttn-1:rgba(43, 145, 228, 0.87);
+    --bttn-2:rgba(255, 0, 179, 0.87);
+    --bttn-3:rgba(43, 222, 228, 0.87);
+    --bttn-4:rgba(162, 0, 226, 0.87); 
+    
+    --border-grad2:rgb(235, 205, 255);
+    --border-grad1:rgb(106, 96, 255);
+}
+
 @font-face{
-    font-family: 'test';
+    font-family: 'LinkFont';
     src:url(Agbalumo-Regular.ttf);
     font-style: normal;
 }
 @font-face{
-    font-family: 'NAME';
+    font-family: 'NameFont';
     src:url(PLAYFAIRDISPLAY-VARIABLEFONT_WGHT.TTF);
     font-style: normal;
 }
 
 h1{
-    background-color: rgb(238, 166, 194);
-    color:white;
-    font-family: NAME,'Times New Roman', Courier, monospace;
+    background-color: var(--header-bkgnd);
+    color:var(--header-txt-color);
+
+    font-family: NameFont,'Times New Roman', Courier, monospace;
     text-align: center;
     font-weight:normal;
 }
 body{
-    background-color: rgb(255, 255, 223);
+    background-color: var(--base-color);
 }
 .bio{
     display: flex;
     justify-content:center ;
+    color:var(--text-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .profilePic{
@@ -29,7 +58,9 @@ body{
     justify-content: center;
     margin: auto;
     max-width: 100%;
+    min-width: 100px;
     width: 15%;
+
     height: auto;
     border-radius: 25%;
 }
@@ -39,26 +70,73 @@ body{
     height: 3.5rem;
 
     margin:auto;
-    
     margin-top: 1rem;
-    
     display:grid;
     grid-auto-flow: column;
-
     justify-content: center;
     align-items: center;
     
-    font-family:  test,'Courier New', sans-serif;
-    color:rgb(255, 255, 255);
-    background-color: rgba(228, 43, 114, 0.87);
+    font-family:  LinkFont,'Courier New', sans-serif;
     font-size: 12pt;
-    border-radius: 35%;
+
+    border-radius: 2em; /*rounded corners*/
+    border: 3px solid transparent; /*for the gradient to peek through*/
+    background-clip: padding-box, border-box; 
+    /*padding box is the solid button color
+    border box is the gradient of the background image on the border*/
+    background-origin: border-box; /*aligns gradient to border*/
 }
-.starR{
-    max-width: 2rem;
-    height: auto;
+/*
+a:link{
+    color:var(--text-color);
 }
-footer{
-    text-align: left;
-    
+a:visited{
+    color:var((--text-color));
+}'
+*/
+#bttn1{
+    background-image:  linear-gradient(var(--bttn-1),var(--bttn-1)),linear-gradient(to right, var(--border-grad1), var(--border-grad2));
+}
+#bttn2{
+    background-image:  linear-gradient(var(--bttn-2),var(--bttn-2)),linear-gradient(to right, var(--border-grad1), var(--border-grad2));
+}
+#bttn3{
+    background-image:  linear-gradient(var(--bttn-3),var(--bttn-3)),linear-gradient(to right,var(--border-grad1), var(--border-grad2));
+}
+#bttn4{
+    background-image:  linear-gradient(var(--bttn-4),var(--bttn-4)),linear-gradient(to right,var(--border-grad1), var(--border-grad2));
+}
+
+
+#theme-switch{
+    height: 6%;
+    width: 6%;
+    padding: 5px;
+    border-radius: 50%; 
+    background-color: var(--header-bkgnd);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:15px;
+    left:20px;
+}
+
+
+#theme-switch svg{
+    fill:var(--header-txt-color);
+}
+
+#theme-switch svg:first-child{
+    display:none;
+    /*lightmode hides sun*/
+}
+.darkmode #theme-switch svg:last-child{
+    display: none;
+    /*darkmode hides moon*/
+}
+
+.darkmode #theme-switch svg:first-child{
+    display:block;
+    /*darkmode shows sun*/
 }

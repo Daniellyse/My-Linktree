@@ -1,13 +1,19 @@
-/*JS colormask
-3 stars that represent RGB
-1 star for black&white text colors w(0,0,0)/b(255,255,255)
-OnHoldDownLCLk number up
-OnHoldDownLCLk number down
-Display R: 0, G: 0, B: text: 0 [on Start @Bottom left footer]
+/*Light/Darkmode toggle*/
 
-Handling variables Button R1,R2,R3,R4, bkgR,nameR */
-let num = 0;
-function colorShift_R(){
-    num = num + 1;
-    document.getElementById("testClick").innerHTML = "holding for: "+num;
+let darkmode = localStorage.getItem('darkmode'); /*Retreives value of key if it exists*/
+const themeSwitch = document.getElementById('theme-switch');
+
+const enableDarkmode = ()=>{
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkmode','active');
 }
+const disableDarkmode = ()=>{
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode',null)
+}
+if (darkmode === "active") enableDarkmode();
+
+themeSwitch.addEventListener("click", () =>{
+    darkmode = localStorage.getItem('darkmode');
+    darkmode!=="active"? enableDarkmode():disableDarkmode();
+});

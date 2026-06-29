@@ -1,35 +1,34 @@
-<!--To Do:
-Profile
-Links (4)
-Style
-Sizing Configuation-->
 <head>
     <title>Daniellyse's LinkTree</title>
     <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "Style.css">
-    <script src="Script.js"></script>
+    <script src="Script.js" defer></script>
 </head>
+<header>
+    <button id = "theme-switch">
+        <!--lightmode-->
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" fill="#1f1f1f"><path d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        <!--darkmode-->
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#1f1f1f"><path d="M600-640 480-760l120-120 120 120-120 120Zm200 120-80-80 80-80 80 80-80 80ZM483-80q-84 0-157.5-32t-128-86.5Q143-253 111-326.5T79-484q0-146 93-257.5T409-880q-18 99 11 193.5T520-521q71 71 165.5 100T879-410q-26 144-138 237T483-80Z"/></svg>
+    </button>
+</header>
 <!--meta viewport scales the website with the device/screen-->
+<body>
+    <!--Display Name-->
+    <h1>Daniellyse Moreno</h1>
 
-<!--Display Name-->
-<h1>Daniellyse Moreno</h1>
+    <!--Profile Image-->
+    <img src = "Daniellyse.jpg" alt = "Profile_Picture" class = "profilePic">
 
-<!--Profile Image-->
-<img src = "Daniellyse.jpg" alt = "Profile_Picture" class = "profilePic">
+    <!--Bio-->
+    <p class = "bio">bio text here.</p>
 
-<!--Bio-->
-<p class = "bio">bio text here.</p>
+    <!--Link lists-->
+    <button id = "bttn1" class = "link"><a href ="https://www.linkedin.com/in/daniellyse-moreno-914785208" target = "_blank">LinkedIn</a></button>
+    <button id = "bttn2" class = "link"><a href ="Resume.html" target = "_blank">Resume</a></button>
+    <button id = "bttn3" class = "link"><a href ="https://github.com/Daniellyse" target = "_blank">Github</a></button>
+    <button id = "bttn4" class = "link"><a href ="Portfolio.html" target = "_blank">Portfolio</a></button>
 
-<!--Link lists-->
-<button id = "custom" class ="link" style = "background-color:rgba(43, 145, 228, 0.87)"><a href ="https://www.linkedin.com/in/daniellyse-moreno-914785208" target = "_blank">LinkedIn</a></button>
-<button class = "link" ><a href ="Resume.html" target = "_blank">Resume</a></button>
-<button class = "link" style = "background-color:rgba(43, 228, 151, 0.87)"><a href ="https://github.com/Daniellyse" target = "_blank">Github</a></button>
-<button class = "link" style = "background-color:rgba(228, 179, 43, 0.87)"><a href ="Portfolio.html" target = "_blank">Portfolio</a></button>
 
-<!--JavaScript Stars-->
-<button onmousedown="colorShift_R()"><img src ="star.png" alt="Red Star" class="starR"></button>
-
-<footer>
-    <p class ="RGB_BW">rgb: (0, 0, 0) text: 0</p>
-    <p id = "testClick"></p>
-</footer>
+</body>
+    

@@ -1,20 +1,70 @@
+:root{
+    --base-color: rgb(255, 255, 223);
+    --header-txt-color: rgba(255, 255, 255, 0.87);
+    --header-bkgnd: rgb(238, 166, 194);
+    --text-color: rgb(40, 0, 66);
 
+    --border-grad2:rgba(255, 214, 32, 0.4);
+    --border-grad1:rgb(250, 171, 239);
+}
+
+.darkmode{
+    --base-color: rgb(32, 0, 68);
+    --header-txt-color:  rgb(235, 205, 255);
+    --header-bkgnd: rgb(64, 7, 139);
+    --text-color: rgb(235, 205, 255);
+    
+    --border-grad2:rgb(235, 205, 255);
+    --border-grad1:rgb(106, 96, 255);
+}
 @font-face{
     font-family: 'NAME';
     src:url(PLAYFAIRDISPLAY-VARIABLEFONT_WGHT.TTF);
     font-style: normal;
 }
 h1{
-    background-color: rgb(238, 166, 194);
-    color:white;
+    background-color:var(--header-bkgnd);
+    color:var(--header-txt-color);
     font-family: NAME,'Times New Roman', Courier, monospace;
     text-align: center;
     font-weight:normal;
 }
 body{
-    background-color: rgb(255, 255, 223);
+    background-color:var(--base-color);
 }
 h2{
-    max-height: 25rem;
-    background-image: linear-gradient(to right, rgb(166, 215, 238),rgba(255, 139, 255, 0));
+    padding: 0.25em;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--border-grad1), var(--border-grad2),rgba(106, 96, 255, 0));
+}
+#theme-switch{
+    height: 6%;
+    width: 6%;
+    padding: 5px;
+    border-radius: 50%; 
+    background-color: var(--header-bkgnd);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:15px;
+    left:20px;
+}
+#theme-switch svg{
+    fill:var(--header-txt-color);
+}
+
+#theme-switch svg:first-child{
+    display:none;
+    /*lightmode hides sun*/
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: none;
+    /*darkmode hides moon*/
+}
+
+.darkmode #theme-switch svg:first-child{
+    display:block;
+    /*darkmode shows sun*/
 }
