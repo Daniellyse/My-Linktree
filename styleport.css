@@ -2,7 +2,7 @@
     --base-color: rgb(255, 255, 223);
     --header-txt-color: rgba(255, 255, 255, 0.87);
     --header-bkgnd: rgb(238, 166, 194);
-    --text-color: rgb(40, 0, 66);
+    --text-color: rgb(85, 4, 139);
 
     --border-grad2:rgba(255, 214, 32, 0.4);
     --border-grad1:rgb(250, 171, 239);
@@ -33,25 +33,35 @@ h1{
     text-align: center;
     font-weight:normal;
 }
-.shelf{
-    display: flex; /*side-by-side*/
-    
+h2{
+    padding: 0.25em;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--border-grad1), var(--border-grad2),rgba(106, 96, 255, 0));
 }
-.box{
+.shelf{
+    display:flex; /*side-by-side*/
+    font-size: 25px;
+}
+.pic{
     margin-bottom: 10%;
+    margin-right: 2.5%;
     margin-left: 2.5%;
-    font-size: 20px;
-    aspect-ratio: 4/3;
     height: 45%;
     width: 45%;
     max-height: 500px;
     max-width: 500px;
-
+    border: 5px solid var(--border-grad1);
+    border-radius: 10px;
 }
 
 #theme-switch{
-    height: 6%;
+    height: auto;
     width: 6%;
+
+    min-width: 45px;
+    max-width: 60px;
+    aspect-ratio: 1;
+    
     padding: 5px;
     border-radius: 50%; 
     background-color: var(--header-bkgnd);
@@ -61,6 +71,14 @@ h1{
     position:fixed;
     bottom:15px;
     left:20px;
+
+    
+    border: 3px solid transparent; /*for the gradient to peek through*/
+    background-clip: padding-box, border-box; 
+    /*padding box is the solid button color
+    border box is the gradient of the background image on the border*/
+    background-image:  linear-gradient(var(--header-bkgnd),var(--header-bkgnd)),linear-gradient(to right,var(--border-grad1), var(--border-grad2));
+    background-origin: border-box; /*aligns gradient to border*/
 }
 #theme-switch svg{
     fill:var(--header-txt-color); 

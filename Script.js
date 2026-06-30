@@ -1,6 +1,7 @@
 /*Light/Darkmode toggle*/
 
-let darkmode = localStorage.getItem('darkmode'); /*Retreives value of key if it exists*/
+/*Retreives value of key if it exists*/
+let darkmode = localStorage.getItem('darkmode'); 
 const themeSwitch = document.getElementById('theme-switch');
 
 const enableDarkmode = ()=>{
